@@ -40,10 +40,10 @@ def optim_or_not(model, yes):
 
 
 def turn_off(model):
-    optim_or_not(model.module.conv1, False)
-    optim_or_not(model.module.layer1, False)
-    optim_or_not(model.module.layer2, False)
-    optim_or_not(model.module.layer3, False)
+    optim_or_not(model.conv1, False)
+    optim_or_not(model.layer1, False)
+    optim_or_not(model.layer2, False)
+    optim_or_not(model.layer3, False)
 
 
 
@@ -54,18 +54,18 @@ def get_10x_lr_params(model):
     """
 
     b = []
-    b.append(model.module.layer5.parameters())
-    b.append(model.module.layer55.parameters())
-    b.append(model.module.layer6_0.parameters())
-    b.append(model.module.layer6_1.parameters())
-    b.append(model.module.layer6_2.parameters())
-    b.append(model.module.layer6_3.parameters())
-    b.append(model.module.layer6_4.parameters())
-    b.append(model.module.layer7.parameters())
-    b.append(model.module.layer9.parameters())
-    b.append(model.module.residule1.parameters())
-    b.append(model.module.residule2.parameters())
-    b.append(model.module.residule3.parameters())
+    b.append(model.layer5.parameters())
+    b.append(model.layer55.parameters())
+    b.append(model.layer6_0.parameters())
+    b.append(model.layer6_1.parameters())
+    b.append(model.layer6_2.parameters())
+    b.append(model.layer6_3.parameters())
+    b.append(model.layer6_4.parameters())
+    b.append(model.layer7.parameters())
+    b.append(model.layer9.parameters())
+    b.append(model.residule1.parameters())
+    b.append(model.residule2.parameters())
+    b.append(model.residule3.parameters())
 
     for j in range(len(b)):
         for i in b[j]:
